@@ -13,8 +13,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://likang.ink/coffee
-root: /
+url: https://likang.ink
+root: /coffee
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -80,6 +80,6 @@ theme: Cxo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/Likang00/coffee
+  repo: https://github.com/Likang00/coffee/
   branch: gh-pages
   message: 

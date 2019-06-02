@@ -70,6 +70,16 @@ npm list 查看本地安装的模块
 npm -g list 查看全局安装的模块
 ```
 
+# 注意
+
+由于busuanzi(不蒜子)的网址更新,导致了使用Hexo Next主题时统计浏览数失效.
+不蒜子官网:http://ibruce.info/2015/04/04/busuanzi/
+
+解决方法:
+找到指定src的文件 更改链接
+将src=“https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js”
+修改为src=“https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js”
+
 ---
 
 likang00@2019
