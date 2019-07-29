@@ -81,6 +81,21 @@ npm -g list 查看全局安装的模块
 修改为src=“https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js”
 
 ---
+## 文章添加摘要图片
+
+在你的博文 front-matter 中加上 photos , photos 是一个数组，第一个参数为图片的地址，第二个参数为图片的标题。
+
+例如:
+
+```
+title: Hello-Hexo!
+date: 2018-06-20 14:39:37
+photos:
+- http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/90/9d60d6efd18d8fa7bdb87f4a7840b787.jpg
+- 'test'
+```
+
+---
 
 likang00@2019
 
