@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		DB MOngo MongoDB基础 | 
+	 
+	coffee
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/coffee/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/coffee/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/coffee/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/coffee/" class="logo">
+        coffee
+    </a>
+
+    <ul id="menu">
+        <li class="menu-item">
+            <a href="/about" class="menu-item-link">ABOUT</a>
+        </li>
+
+        <!-- <li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li> -->
+
+        <li class="menu-item">
+            <a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+                <i class="fa fa-github fa-2x"></i>
+            </a>
+        </li>
+    </ul>
+</header>
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01计算机组成原理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/10/01%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%A6%82%E8%AE%BA/">
+										概论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09HEXO
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/11/09HEXO/hexo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+										hexo主题推荐
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										草稿
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/01/18/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B01/">
+										Docker笔记1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/02/21/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B02/">
+										Docker笔记2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/coffee/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/">
+										MongoDB基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2018/12/27/%E8%8D%89%E7%A8%BF/MongoDB%E8%81%9A%E5%90%88/">
+										MongoDB聚合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/04/01/%E8%8D%89%E7%A8%BF/Python-pymongo/">
+										Python-pymongo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/">
+										Python-pymysql
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/07/11/%E8%8D%89%E7%A8%BF/Python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+										Python-正则表达式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/07/08/%E8%8D%89%E7%A8%BF/SQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">
+										SQL必知必会
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2018/12/31/%E8%8D%89%E7%A8%BF/Win10%E5%AD%90%E7%B3%BB%E7%BB%9FWSL/">
+										Win10子系统WSL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/10/%E8%8D%89%E7%A8%BF/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/10/%E8%8D%89%E7%A8%BF/%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F/">
+										列表推导式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	MongoDB基础
+</h1>
+<div class="article-meta">
+	
+	<span>Likang</span>
+	<span>2018-11-24 00:00:00</span>
+    
+		<div id="article-categories">
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/DB/">DB</a>
+						
+							>
+						
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/DB/MOngo/">MOngo</a>
+						
+                    </span>
+                
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h2 id="MongoDB-是一个基于分布式文件存储的数据库。由-C-语言编写。旨在为-WEB-应用提供可扩展的高性能数据存储解决方案。"><a href="#MongoDB-是一个基于分布式文件存储的数据库。由-C-语言编写。旨在为-WEB-应用提供可扩展的高性能数据存储解决方案。" class="headerlink" title="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。"></a>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</h2><p>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p>
+<a id="more"></a>
+<p><img src="/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/mongodb.png" alt="MongoDB"></p>
+<h1 id="0-数据库启动-关闭-🍕"><a href="#0-数据库启动-关闭-🍕" class="headerlink" title="0.数据库启动/关闭 🍕"></a>0.数据库启动/关闭 🍕</h1><p>启动mongonDB:<br>C:\mongo\mongodb\bin &gt;&gt;</p>
+<pre><code class="shell">mongod --dbpath C:\mongo\mongodb\data\db
+mongod --dbpath C:\mongo\mongodb\data\db --repair # 异常关闭时重启</code></pre>
+<p>关闭mongodb:<br>mongo_shell &gt;&gt;</p>
+<pre><code>use admin
+db.shutdownServer()</code></pre><hr>
+<h1 id="1-数据库的导入和导出-🍔"><a href="#1-数据库的导入和导出-🍔" class="headerlink" title="1.数据库的导入和导出 🍔"></a>1.数据库的导入和导出 🍔</h1><pre><code class="shell">本地:127.0.0.1:27017
+线上:xxx.xxx.xx.xxx:xxxxx-u xxxx -p xxxxxxxx
+
+**BSON**
+bson格式导出
+mongodump -h 127.0.0.1:27017 -d xxxx -c xxxx -o ./
+mongodump -h xxx.xxx.xx.xxx:xxxx -d xxxx -c xxxx -u xxxx -p xxxxxxxx -o ./
+bson格式导入
+mongorestore -h xxx.xxx.xx.xxx:xxxx -d xxxx --dir F:\xxxx -u xxxx -p xxxxxxxx
+mongorestore -h 127.0.0.1:27017 -d xxxx--dir F:\xxxx\xxxx
+
+**JSON**
+json格式导出
+mongoexport -h xxx.xxx.xx.xxx:xxxx -d xxxx-c xxxx -u xxxx -p xxxxxxxx --out name.json
+json格式导入
+mongoimport -h xxx.xxx.xx.xxx:xxxx -d xxxx -c xxxx --file name.json -u xxxx -p xxxxxxxx
+mongoimport -h xxx.xxx.xx.xxx:xxxx -d xxxx -c xxxx (--drop) --file name.json -u xxxx -p xxxxxxxx</code></pre>
+<hr>
+<h1 id="2-更新和删除-字段-🍟"><a href="#2-更新和删除-字段-🍟" class="headerlink" title="2.更新和删除 字段 🍟"></a>2.更新和删除 字段 🍟</h1><p><strong>修改</strong> 字段名</p>
+<pre><code class="js">db.getCollection(&#39;pydb&#39;).update({}, {$rename : {&quot;pop&quot; : &quot;abc&quot;}}, false, true)
+db.getCollection(&#39;SS_UniversityInfo&#39;).update({}, {$rename : {&quot;XuanKaoScrope&quot; : &quot;SubjectScope&quot;}}, false, true)</code></pre>
+<p>参数说明：<br>db.collection.update(criteria,objNew,upsert,multi)<br><strong>criteria</strong> ：查询条件<br><strong>objNew</strong> ：update对象和一些更新操作符<br><strong>upsert</strong> ：如果不存在update的记录，是否插入objNew这个新的文档，true为插入，默认为false，不插入。<br><strong>multi</strong> ：默认是false，只更新找到的第一条记录。如果为true，把按条件查询出来的记录全部更新</p>
+<p><strong>更新</strong> 字段</p>
+<pre><code class="js">db.table.update({}, {$set: {content:&quot;xxx&quot;}}, false,true)</code></pre>
+<p><strong>删除</strong> 字段</p>
+<pre><code class="js">db.table.update({},{$unset:{content:&quot;&quot;}},false, true)</code></pre>
+<hr>
+<h2 id="练习-🍤"><a href="#练习-🍤" class="headerlink" title="练习 🍤"></a>练习 🍤</h2><ul>
+<li>修改列表里的字典里的字段名</li>
+</ul>
+<pre><code class="js">// 把XuanKaoSubjectScrope 字段改成 Scrope
+[
+    {
+        &quot;SubjectScope&quot;:[
+            {&quot;XuanKaoSubjectScrope&quot;:&quot;x1&quot;},
+            {&quot;XuanKaoSubjectScrope&quot;:&quot;x2&quot;},
+            {&quot;XuanKaoSubjectScrope&quot;:&quot;x3&quot;},
+        ]
+    },
+    {},
+    {}...
+]</code></pre>
+<pre><code class="js">// [未完美解决] 当时采用的方法是导出json再替换文本😂
+db.getCollection(&#39;SS_UniversityInfo&#39;).update(
+    {&quot;SubjectScope&quot;:{
+        &quot;$elemMatch&quot;:{
+            &quot;XuanKaoSubjectScrope&quot;:{
+                &quot;$exists&quot;:true}}}},
+    {&quot;$rename&quot;:{
+        &quot;$SubjectScope.$.XuanKaoSubjectScrope&quot;:&quot;SubjectScope.$.Scrope&quot;}
+        },
+    false,
+    true)</code></pre>
+<pre><code class="js">// 现在发现可以写python或js脚本解决</code></pre>
+<hr>
+<ul>
+<li>正则寻找不以cn/com/org/net/hk/edu结尾的字段</li>
+</ul>
+<pre><code class="js">db.getCollection(&#39;SS_UniversityInfo&#39;).find({&quot;WebSite&quot;:{&quot;$not&quot;:/cn$|com$|org$|net$|hk$|edu$/}})
+
+db.getCollection(&#39;SS_UniversityInfo&#39;).find({&quot;WebSite&quot;:{&quot;$regex&quot;:&quot;net$|com$&quot;}})</code></pre>
+<ul>
+<li><a href="https://blog.csdn.net/yaomingyang/article/details/75103480" target="_blank" rel="noopener">MongoDB逻辑操作符$or, $and,$not,$nor</a></li>
+</ul>
+<hr>
+<h1 id="3-MogoDB-聚合-🍳"><a href="#3-MogoDB-聚合-🍳" class="headerlink" title="3.MogoDB 聚合 🍳"></a>3.MogoDB 聚合 🍳</h1><ul>
+<li><a href="http://www.runoob.com/mongodb/mongodb-aggregate.html" target="_blank" rel="noopener">菜鸟教程 MongoDB 聚合</a></li>
+</ul>
+<p>管道在Unix和Linux中一般用于将当前命令的 <strong>输出结果</strong> 作为下一个命令的 <strong>参数</strong> 。<br>MongoDB的聚合管道将MongoDB文档在一个管道处理完毕后将结果<strong>传递</strong>给下一个管道处理。<br>管道操作是可以<strong>重复</strong>的。</p>
+<p>简单介绍一下聚合中常用的几个参数：</p>
+<pre><code class="py">$project：修改输入文档的结构。可以用来重命名、增加或删除域，也可以用于创建计算结果以及嵌套文档。
+$match：用于过滤数据，只输出符合条件的文档。$match使用MongoDB的标准查询操作。
+$limit：用来限制MongoDB聚合管道返回的文档数。
+$skip：在聚合管道中跳过指定数量的文档，并返回余下的文档。
+$unwind：将文档中的某一个数组类型字段拆分成多条，每条包含数组中的一个值。
+$group：将集合中的文档分组，可用于统计结果。
+$sort：将输入文档排序后输出。
+$geoNear：输出接近某一地理位置的有序文档</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/coffee/2018/12/27/%E8%8D%89%E7%A8%BF/MongoDB%E8%81%9A%E5%90%88/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  MongoDB聚合
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Likang</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

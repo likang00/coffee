@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Python-pymysql | 
+	 
+	coffee
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/coffee/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/coffee/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/coffee/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/coffee/" class="logo">
+        coffee
+    </a>
+
+    <ul id="menu">
+        <li class="menu-item">
+            <a href="/about" class="menu-item-link">ABOUT</a>
+        </li>
+
+        <!-- <li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li> -->
+
+        <li class="menu-item">
+            <a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+                <i class="fa fa-github fa-2x"></i>
+            </a>
+        </li>
+    </ul>
+</header>
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01计算机组成原理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/10/01%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%A6%82%E8%AE%BA/">
+										概论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09HEXO
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/11/09HEXO/hexo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+										hexo主题推荐
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										草稿
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/01/18/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B01/">
+										Docker笔记1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/02/21/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B02/">
+										Docker笔记2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/">
+										MongoDB基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2018/12/27/%E8%8D%89%E7%A8%BF/MongoDB%E8%81%9A%E5%90%88/">
+										MongoDB聚合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/04/01/%E8%8D%89%E7%A8%BF/Python-pymongo/">
+										Python-pymongo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/coffee/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/">
+										Python-pymysql
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/07/11/%E8%8D%89%E7%A8%BF/Python-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+										Python-正则表达式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2019/07/08/%E8%8D%89%E7%A8%BF/SQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">
+										SQL必知必会
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2018/12/31/%E8%8D%89%E7%A8%BF/Win10%E5%AD%90%E7%B3%BB%E7%BB%9FWSL/">
+										Win10子系统WSL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/10/%E8%8D%89%E7%A8%BF/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/coffee/2020/06/10/%E8%8D%89%E7%A8%BF/%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F/">
+										列表推导式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	Python-pymysql
+</h1>
+<div class="article-meta">
+	
+	<span>Likang</span>
+	<span>2019-02-28 23:01:21</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h4 id="pymysql"><a href="#pymysql" class="headerlink" title="pymysql"></a>pymysql</h4><p>今天学习一下mysql，在python3中利用PyMySQL模块来操作。<br>先安装包:<code>pip install PyMySQL</code></p>
+<hr>
+<h2 id="1-语法速览"><a href="#1-语法速览" class="headerlink" title="1.语法速览"></a>1.语法速览</h2><pre><code class="sql">1、语法格式
+    对象名 = pymysql.connect(&quot;主机地址&quot;,&quot;用户名&quot;,&quot;密码&quot;,&quot;库名&quot;,&quot;端口号&quot;)
+2、connect连接对象支持的方法
+    1、cursor() 创建一个游标对象db.cursor()
+    2、commit() 提交到数据库执行(表记录增删改)
+    3、rollback() 回滚
+    4、close() 关闭数据库连接
+3、游标对象支持的方法
+    1、execute(&quot;SQL命令&quot;) 执行SQL命令
+    2、fetchone() 取得结果集的第一条记录
+    3、fetchmany(n) 取得结果集的 n 条记录
+    4、fetchall() 取得结果集的所有记录
+    5、close() 关闭游标对象</code></pre>
+<hr>
+<h2 id="2-下面记录一下操作"><a href="#2-下面记录一下操作" class="headerlink" title="2.下面记录一下操作"></a>2.下面记录一下操作</h2><h4 id="建立连接-腾讯云数据库-mysql5-7"><a href="#建立连接-腾讯云数据库-mysql5-7" class="headerlink" title="建立连接(腾讯云数据库[mysql5.7])"></a>建立连接(腾讯云数据库[mysql5.7])</h4><pre><code class="py">import pymysql
+# 建立连接
+# db = pymysql.connect(host=, user=, password=, database=, port=)
+db = pymysql.connect(&quot;xxxxx.com&quot;, &quot;root&quot;, &quot;mysq1112&quot;, &quot;MyDB&quot;, xxxxx)
+# 创建游标对象
+cur = db.cursor()</code></pre>
+<h4 id="数据库版本信息"><a href="#数据库版本信息" class="headerlink" title="数据库版本信息"></a>数据库版本信息</h4><pre><code class="py">cur.execute(&#39;SELECT VERSION()&#39;)
+data = cur.fetchone()
+print(f&quot;Database version :{data}&quot;)</code></pre>
+<h4 id="建表，插入数据"><a href="#建表，插入数据" class="headerlink" title="建表，插入数据"></a>建表，插入数据</h4><h6 id="test1"><a href="#test1" class="headerlink" title="test1"></a>test1</h6><pre><code class="py"># creat table test
+sql_create =&#39;create table test(id INT(8) , name VARCHAR(20) , age INT(3) , value INT(3) )&#39;
+cur.execute(sql_create)
+cur.connection.commit()
+# insert table test
+sql_insert = &#39;INSERT INTO test(id, name, age, value) VALUES (10002, &quot;docker&quot;, 15, 87)&#39;
+cur.execute(sql_insert)
+cur.connection.commit()</code></pre>
+<h6 id="test2"><a href="#test2" class="headerlink" title="test2"></a>test2</h6><pre><code class="py"># create table students
+sql_create = &#39;&#39;&#39;CREATE TABLE students(
+`id` bigint(20) NOT NULL AUTO_INCREMENT,
+`class_id` bigint(20) NOT NULL,
+`name` varchar(100) NOT NULL,
+`gender` varchar(1) NOT NULL,
+`score` int(11) NOT NULL,
+PRIMARY KEY (`id`)
+)
+&#39;&#39;&#39;
+cur.execute(sql_create)
+# insert table students 
+list = [(1,1,&#39;小明&#39;,&#39;M&#39;,90),
+        (2,1,&#39;小红&#39;,&#39;F&#39;,95),
+        (3,1,&#39;小军&#39;,&#39;M&#39;,88),
+        (4,1,&#39;小米&#39;,&#39;F&#39;,73),
+        (5,2,&#39;小白&#39;,&#39;F&#39;,81),
+        (6,2,&#39;小兵&#39;,&#39;M&#39;,55),
+        (7,2,&#39;小林&#39;,&#39;M&#39;,85),
+        (8,3,&#39;小新&#39;,&#39;F&#39;,91),
+        (9,3,&#39;小王&#39;,&#39;M&#39;,89),
+        (10,3,&#39;小丽&#39;,&#39;F&#39;,88)]
+for i in list:
+    sql_inserts = f&#39;INSERT INTO students(id, class_id, name, gender, score) VALUES {i}&#39;
+    print(sql_inserts)
+    cur.execute(sql_inserts)
+    cur.connection.commit()</code></pre>
+<h4 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h4><h5 id="全表查询"><a href="#全表查询" class="headerlink" title="全表查询"></a>全表查询</h5><pre><code class="py">sql_select = &#39;&#39;&#39;select * from Writers&#39;&#39;&#39;
+cur.execute(sql_select)
+result = cur.fetchall()
+print(f&quot;select * from:{result}&quot;)</code></pre>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><pre><code class="py">cur.execute(&#39;drop database &lt;database_name&gt;&#39;)
+cur.execute(&#39;drop table &lt;table_name&gt;&#39;)</code></pre>
+<h4 id="记得关闭数据库"><a href="#记得关闭数据库" class="headerlink" title="记得关闭数据库"></a>记得关闭数据库</h4><p><code>db.close()</code></p>
+<hr>
+<h2 id="3-快速执行SQL语句"><a href="#3-快速执行SQL语句" class="headerlink" title="3.快速执行SQL语句"></a>3.快速执行SQL语句</h2><h4 id="快速运行SQL语句"><a href="#快速运行SQL语句" class="headerlink" title="快速运行SQL语句"></a>快速运行SQL语句</h4><pre><code class="py">    cur.execute(&#39;SQL语句&#39;)
+    print(cur.fetchall())</code></pre>
+<h4 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h4><pre><code class="sql">-- 按AND条件查询students
+SELECT * FROM students WHERE score &gt;= 80 AND gender = &#39;M&#39;
+-- 按OR条件查询students
+SELECT * FROM students WHERE score &gt;= 80 OR gender = &#39;M&#39;
+-- 按NOT条件查询students
+SELECT * FROM students WHERE NOT class_id = 2
+-- 按多个条件查询students
+SELECT * FROM students WHERE (score &lt; 80 OR score &gt; 90) AND gender = &#39;M&#39;
+-- 排序test
+SELECT id, name, gender, score FROM students ORDER BY id;
+-- desc 倒序
+SELECT id, name, gender, score FROM students ORDER BY id DESC;
+-- ASC升序 DESC降序
+SELECT id, name, gender, score FROM students ORDER BY gender, score;</code></pre>
+<hr>
+<h2 id="4-查询"><a href="#4-查询" class="headerlink" title="4.查询"></a>4.查询</h2><h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><pre><code class="py">def fun1(pageSize, pageIndex):
+    limit = pageSize
+    offset = pageSize * (pageIndex - 1)
+    print(f&#39;limit:{limit},offset:{offset}&#39;)
+    cur.execute(f&#39;&#39;&#39;
+    SELECT id, name, gender, score FROM students ORDER BY id LIMIT {limit} OFFSET {offset}
+    &#39;&#39;&#39;)
+    print(cur.fetchall())
+fun1(3,4)</code></pre>
+<h4 id="聚合查询"><a href="#聚合查询" class="headerlink" title="聚合查询"></a>聚合查询</h4><pre><code class="py">cur.execute(&#39;&#39;&#39;
+SELECT COUNT(*) boys FROM students WHERE gender = &#39;M&#39;
+&#39;&#39;&#39;)
+print(cur.fetchall())</code></pre>
+<h5 id="其他聚合函数"><a href="#其他聚合函数" class="headerlink" title="其他聚合函数"></a>其他聚合函数</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SUM</td>
+<td>计算某一列的合计值，该列必须为数值类型</td>
+</tr>
+<tr>
+<td>AVG</td>
+<td>计算某一列的平均值，该列必须为数值类型</td>
+</tr>
+<tr>
+<td>MAX</td>
+<td>计算某一列的最大值</td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>计算某一列的最小值</td>
+</tr>
+</tbody></table>
+<h5 id="分组聚合"><a href="#分组聚合" class="headerlink" title="分组聚合"></a>分组聚合</h5><pre><code class="py">cur.execute(&#39;&#39;&#39;
+SELECT COUNT(*) boys FROM students GROUP BY class_id
+&#39;&#39;&#39;)
+print(cur.fetchall())</code></pre>
+<pre><code class="py">cur.execute(&#39;&#39;&#39;
+SELECT class_id, gender, COUNT(*) num FROM students GROUP BY class_id, gender;
+&#39;&#39;&#39;)
+print(cur.fetchall())</code></pre>
+<h4 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h4><h6 id="test1-1"><a href="#test1-1" class="headerlink" title="test1"></a>test1</h6><pre><code class="py">cur.execute(&#39;&#39;&#39;
+SELECT * FROM students, classes;
+&#39;&#39;&#39;)</code></pre>
+<h6 id="test2-1"><a href="#test2-1" class="headerlink" title="test2"></a>test2</h6><pre><code class="py">cur.execute(&#39;&#39;&#39;
+SELECT
+    s.id sid,
+    s.name,
+    s.gender,
+    s.score,
+    c.id cid,
+    c.name cnameo
+FROM students s, classes c
+WHERE s.gender = &#39;M&#39; AND c.id = 1;
+&#39;&#39;&#39;)</code></pre>
+<h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><h6 id="连接查询是另一种类型的多表查询。连接查询对多个表进行JOIN运算，简单地说，就是先确定一个主表作为结果集，然后，把其他表的行有选择性地“连接”在主表结果集上。"><a href="#连接查询是另一种类型的多表查询。连接查询对多个表进行JOIN运算，简单地说，就是先确定一个主表作为结果集，然后，把其他表的行有选择性地“连接”在主表结果集上。" class="headerlink" title="连接查询是另一种类型的多表查询。连接查询对多个表进行JOIN运算，简单地说，就是先确定一个主表作为结果集，然后，把其他表的行有选择性地“连接”在主表结果集上。"></a>连接查询是另一种类型的多表查询。连接查询对多个表进行JOIN运算，简单地说，就是先确定一个主表作为结果集，然后，把其他表的行有选择性地“连接”在主表结果集上。</h6><pre><code class="py"># 连接查询
+cur.execute(&#39;&#39;&#39;
+SELECT s.id, s.name, s.class_id, c.name class_name, s.gender, s.score
+FROM students s
+INNER JOIN classes c
+ON s.class_id = c.id
+&#39;&#39;&#39;)
+print(cur.fetchall())</code></pre>
+<h6 id><a href="#" class="headerlink" title></a></h6><pre><code>1.先确定主表，仍然使用FROM &lt;表1&gt;的语法；
+2.再确定需要连接的表，使用INNER JOIN &lt;表2&gt;的语法；
+3.然后确定连接条件，使用ON &lt;条件...&gt;，这里的条件是s.class_id = c.id，表示students表的class_id列与classes表的id列相同的行需要连接；
+4.可选：加上WHERE子句、ORDER BY等子句。</code></pre><h6 id="各种连接语句"><a href="#各种连接语句" class="headerlink" title="各种连接语句"></a>各种连接语句</h6><p><code>SELECT ... FROM tableA ??? JOIN tableB ON tableA.column1 = tableB.column2;</code></p>
+<p>1.INNER JOIN</p>
+<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_INNER_JOIN.png" alt></p>
+<!-- <p align="center">
+    <img src="https://images.cnblogs.com/cnblogs_com/spacescp/1383720/o_INNER_JOIN.png" alt="Sample"  width="100" height="50">
+    <p align="center">
+        <em>图片示例2</em>
+    </p>
+</p> -->
+
+<h6 id="只返回同时存在于两张表的行数据"><a href="#只返回同时存在于两张表的行数据" class="headerlink" title="只返回同时存在于两张表的行数据"></a>只返回同时存在于两张表的行数据</h6><p>2.LEFT OUTER JOIN</p>
+<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_LEFT_OUTER_JOIN.png" alt></p>
+<h6 id="返回左表都存在的行"><a href="#返回左表都存在的行" class="headerlink" title="返回左表都存在的行"></a>返回左表都存在的行</h6><p>3.RIGHT OUTER JOIN</p>
+<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_RIGHT_OUTER_JOIN.png" alt></p>
+<h6 id="返回右表都存在的行"><a href="#返回右表都存在的行" class="headerlink" title="返回右表都存在的行"></a>返回右表都存在的行</h6><p>4.FULL OUTER JOIN</p>
+<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_FULL_OUTER_JOIN.png" alt></p>
+<h6 id="两张表的所有记录全部选择出来"><a href="#两张表的所有记录全部选择出来" class="headerlink" title="两张表的所有记录全部选择出来"></a>两张表的所有记录全部选择出来</h6><h4 id="补充"><a href="#补充" class="headerlink" title="-补充-"></a>-补充-</h4><h5 id="JOIN查询"><a href="#JOIN查询" class="headerlink" title="JOIN查询"></a>JOIN查询</h5><p>JOIN查询需要先确定主表，然后把另一个表的数据“附加”到结果集上；<br>INNER JOIN是最常用的一种JOIN查询，它的语法是SELECT … FROM &lt;表1&gt; INNER JOIN &lt;表2&gt; ON &lt;条件…&gt;；<br>JOIN查询仍然可以使用WHERE条件和ORDER BY排序。</p>
+<h5 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h5><table>
+<thead>
+<tr>
+<th>条件</th>
+<th>表达式举例1</th>
+<th>表达式举例2</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>使用=判断相等</td>
+<td>score = 80</td>
+<td>name = ‘abc’</td>
+<td>字符串需要用单引号括起来</td>
+</tr>
+<tr>
+<td>使用&gt;判断大于</td>
+<td>score &gt; 80</td>
+<td>name &gt; ‘abc’</td>
+<td>字符串比较根据ASCII码，中文字符比较根据数据库设置</td>
+</tr>
+<tr>
+<td>使用&gt;=判断大于或相等</td>
+<td>score &gt;= 80</td>
+<td>name &gt;= ‘abc’</td>
+<td></td>
+</tr>
+<tr>
+<td>使用&lt;判断小于</td>
+<td>score &lt; 80</td>
+<td>name &lt;= ‘abc’</td>
+<td></td>
+</tr>
+<tr>
+<td>使用&lt;=判断小于或相等</td>
+<td>score &lt;= 80</td>
+<td>name &lt;= ‘abc’</td>
+<td></td>
+</tr>
+<tr>
+<td>使用&lt;&gt;判断不相等</td>
+<td>score &lt;&gt; 80</td>
+<td>name &lt;&gt; ‘abc’</td>
+<td></td>
+</tr>
+<tr>
+<td>使用LIKE判断相似</td>
+<td>name LIKE ‘ab%’</td>
+<td>name LIKE ‘%bc%’</td>
+<td>%表示任意字符，例如’ab%’将匹配’ab’，’abc’，’abcd’</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="5-修改数据"><a href="#5-修改数据" class="headerlink" title="5.修改数据"></a>5.修改数据</h2><h4 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a>INSERT</h4><h4 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h4><h4 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h4><p><em>—等待更新—</em></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/coffee/2019/04/01/%E8%8D%89%E7%A8%BF/Python-pymongo/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  Python-pymongo
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/coffee/2019/02/21/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B02/">
+                Docker笔记2
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Likang</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
