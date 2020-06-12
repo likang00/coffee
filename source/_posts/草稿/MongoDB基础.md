@@ -1,9 +1,15 @@
 ---
-title: MongoDB基础
+title: DB MOngo MongoDB基础
 date: 2018-11-24 00:00:00
 tags: 数据库
+categories: [DB, MOngo]
 ---
 
+## MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。
+
+MongoDB 将数据存储为一个文档，数据结构由键值(key=>value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。
+
+<!-- more -->
 ![MongoDB](./mongodb.png)
 
 # 0.数据库启动/关闭 🍕

@@ -2,6 +2,7 @@
 title: MongoDB聚合
 date: 2018-12-27 22:33:04
 tags: 数据库
+categories: db
 ---
 
 # 聚合管道功能：
