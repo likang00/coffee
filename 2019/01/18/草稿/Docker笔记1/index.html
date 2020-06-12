@@ -64,7 +64,7 @@
 
     <ul id="menu">
         <li class="menu-item">
-            <a href="/about" class="menu-item-link">ABOUT</a>
+            <a href="/coffee/about" class="menu-item-link">ABOUT</a>
         </li>
 
         <!-- <li class="menu-item">
@@ -74,7 +74,7 @@
 		</li> -->
 
         <li class="menu-item">
-            <a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+            <a href="https://github.com/likang00" class="menu-item-link" target="_blank">
                 <i class="fa fa-github fa-2x"></i>
             </a>
         </li>
@@ -247,30 +247,30 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<h1 id="article-title">
-
-	Docker笔记1
+    
+        Docker笔记1
 </h1>
 <div class="article-meta">
-	
-	<span>Likang</span>
-	<span>2019-01-18 12:00:00</span>
     
-		<div id="article-categories">
+            <span>Likang</span>
+            <span>2019-01-18 12:00:00</span>
             
-                
-                    <span>
+                <div id="article-categories">
+                    
+                        
+                            <span>
                         <i class="fa fa-folder" aria-hidden="true"></i>
-                        <a href="/categories/Docker/">Docker</a>
+                        <a href="/coffee/categories/Docker/">Docker</a>
 						
                     </span>
+                            
+                                
+                </div>
                 
-            
-		</div>
-    
 </div>
 
 <div id="article-content">
-	<h1 id="云服务器入门"><a href="#云服务器入门" class="headerlink" title="云服务器入门"></a>云服务器入门</h1><h6 id="购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker-一个应用容器引擎-来管理和发布。"><a href="#购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker-一个应用容器引擎-来管理和发布。" class="headerlink" title="购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker(一个应用容器引擎)来管理和发布。"></a>购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker(一个应用容器引擎)来管理和发布。</h6><h6 id="使用的SSH终端为Xshell6-或者PuTTY-。"><a href="#使用的SSH终端为Xshell6-或者PuTTY-。" class="headerlink" title="使用的SSH终端为Xshell6(或者PuTTY)。"></a>使用的SSH终端为Xshell6(或者PuTTY)。</h6><h6 id="还可以用WinSCP互传文件。"><a href="#还可以用WinSCP互传文件。" class="headerlink" title="还可以用WinSCP互传文件。"></a>还可以用WinSCP互传文件。</h6><h6 id="重点记录Docker的使用。"><a href="#重点记录Docker的使用。" class="headerlink" title="重点记录Docker的使用。"></a>重点记录Docker的使用。</h6><p><img src="/2019/01/18/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B01/docker01.jpg" alt="avatar"></p>
+    <h1 id="云服务器入门"><a href="#云服务器入门" class="headerlink" title="云服务器入门"></a>云服务器入门</h1><h6 id="购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker-一个应用容器引擎-来管理和发布。"><a href="#购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker-一个应用容器引擎-来管理和发布。" class="headerlink" title="购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker(一个应用容器引擎)来管理和发布。"></a>购买了腾讯云的云服务器，开始学习如何将代码部署到服务器上，这里使用了Docker(一个应用容器引擎)来管理和发布。</h6><h6 id="使用的SSH终端为Xshell6-或者PuTTY-。"><a href="#使用的SSH终端为Xshell6-或者PuTTY-。" class="headerlink" title="使用的SSH终端为Xshell6(或者PuTTY)。"></a>使用的SSH终端为Xshell6(或者PuTTY)。</h6><h6 id="还可以用WinSCP互传文件。"><a href="#还可以用WinSCP互传文件。" class="headerlink" title="还可以用WinSCP互传文件。"></a>还可以用WinSCP互传文件。</h6><h6 id="重点记录Docker的使用。"><a href="#重点记录Docker的使用。" class="headerlink" title="重点记录Docker的使用。"></a>重点记录Docker的使用。</h6><p><img src="/coffee/2019/01/18/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B01/docker01.jpg" alt="avatar"></p>
 <h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><h3 id="针对CentOS7-5"><a href="#针对CentOS7-5" class="headerlink" title="[针对CentOS7.5]"></a>[针对CentOS7.5]</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>yum install -y docker # 安装docker<br>systemctl start docker # 启动docker<br>docker search python<br>docker pull python</p>
 <pre><code>- systemctl docker start 
 - systemctl docker restart 
@@ -529,29 +529,29 @@ services:
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/coffee/2019/02/21/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B02/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  Docker笔记2
-              </a>
-            
+                <a href="/coffee/2019/02/21/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B02/">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    Docker笔记2
+                </a>
+                
         </div>
         <div class="item right">
             
-              <a href="/coffee/2018/12/31/%E8%8D%89%E7%A8%BF/Win10%E5%AD%90%E7%B3%BB%E7%BB%9FWSL/">
-                Win10子系统WSL
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
+                <a href="/coffee/2018/12/31/%E8%8D%89%E7%A8%BF/Win10%E5%AD%90%E7%B3%BB%E7%BB%9FWSL/">
+                    Win10子系统WSL
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                
         </div>
     </div>
+    
 
+        
 
-
-
-<script>
-	
-	
-</script>
+                <script>
+                    
+                    
+                </script>
 	</div>
 	<div id="footer">
 	<p>

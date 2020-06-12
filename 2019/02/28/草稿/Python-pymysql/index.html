@@ -64,7 +64,7 @@
 
     <ul id="menu">
         <li class="menu-item">
-            <a href="/about" class="menu-item-link">ABOUT</a>
+            <a href="/coffee/about" class="menu-item-link">ABOUT</a>
         </li>
 
         <!-- <li class="menu-item">
@@ -74,7 +74,7 @@
 		</li> -->
 
         <li class="menu-item">
-            <a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+            <a href="https://github.com/likang00" class="menu-item-link" target="_blank">
                 <i class="fa fa-github fa-2x"></i>
             </a>
         </li>
@@ -247,22 +247,22 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<h1 id="article-title">
-
-	Python-pymysql
+    
+        Python-pymysql
 </h1>
 <div class="article-meta">
-	
-	<span>Likang</span>
-	<span>2019-02-28 23:01:21</span>
     
-		<div id="article-categories">
+            <span>Likang</span>
+            <span>2019-02-28 23:01:21</span>
             
-		</div>
-    
+                <div id="article-categories">
+                    
+                </div>
+                
 </div>
 
 <div id="article-content">
-	<h4 id="pymysql"><a href="#pymysql" class="headerlink" title="pymysql"></a>pymysql</h4><p>今天学习一下mysql，在python3中利用PyMySQL模块来操作。<br>先安装包:<code>pip install PyMySQL</code></p>
+    <h4 id="pymysql"><a href="#pymysql" class="headerlink" title="pymysql"></a>pymysql</h4><p>今天学习一下mysql，在python3中利用PyMySQL模块来操作。<br>先安装包:<code>pip install PyMySQL</code></p>
 <hr>
 <h2 id="1-语法速览"><a href="#1-语法速览" class="headerlink" title="1.语法速览"></a>1.语法速览</h2><pre><code class="sql">1、语法格式
     对象名 = pymysql.connect(&quot;主机地址&quot;,&quot;用户名&quot;,&quot;密码&quot;,&quot;库名&quot;,&quot;端口号&quot;)
@@ -419,7 +419,7 @@ print(cur.fetchall())</code></pre>
 3.然后确定连接条件，使用ON &lt;条件...&gt;，这里的条件是s.class_id = c.id，表示students表的class_id列与classes表的id列相同的行需要连接；
 4.可选：加上WHERE子句、ORDER BY等子句。</code></pre><h6 id="各种连接语句"><a href="#各种连接语句" class="headerlink" title="各种连接语句"></a>各种连接语句</h6><p><code>SELECT ... FROM tableA ??? JOIN tableB ON tableA.column1 = tableB.column2;</code></p>
 <p>1.INNER JOIN</p>
-<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_INNER_JOIN.png" alt></p>
+<p><img src="/coffee/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_INNER_JOIN.png" alt></p>
 <!-- <p align="center">
     <img src="https://images.cnblogs.com/cnblogs_com/spacescp/1383720/o_INNER_JOIN.png" alt="Sample"  width="100" height="50">
     <p align="center">
@@ -428,11 +428,11 @@ print(cur.fetchall())</code></pre>
 </p> -->
 
 <h6 id="只返回同时存在于两张表的行数据"><a href="#只返回同时存在于两张表的行数据" class="headerlink" title="只返回同时存在于两张表的行数据"></a>只返回同时存在于两张表的行数据</h6><p>2.LEFT OUTER JOIN</p>
-<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_LEFT_OUTER_JOIN.png" alt></p>
+<p><img src="/coffee/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_LEFT_OUTER_JOIN.png" alt></p>
 <h6 id="返回左表都存在的行"><a href="#返回左表都存在的行" class="headerlink" title="返回左表都存在的行"></a>返回左表都存在的行</h6><p>3.RIGHT OUTER JOIN</p>
-<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_RIGHT_OUTER_JOIN.png" alt></p>
+<p><img src="/coffee/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_RIGHT_OUTER_JOIN.png" alt></p>
 <h6 id="返回右表都存在的行"><a href="#返回右表都存在的行" class="headerlink" title="返回右表都存在的行"></a>返回右表都存在的行</h6><p>4.FULL OUTER JOIN</p>
-<p><img src="/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_FULL_OUTER_JOIN.png" alt></p>
+<p><img src="/coffee/2019/02/28/%E8%8D%89%E7%A8%BF/Python-pymysql/o_FULL_OUTER_JOIN.png" alt></p>
 <h6 id="两张表的所有记录全部选择出来"><a href="#两张表的所有记录全部选择出来" class="headerlink" title="两张表的所有记录全部选择出来"></a>两张表的所有记录全部选择出来</h6><h4 id="补充"><a href="#补充" class="headerlink" title="-补充-"></a>-补充-</h4><h5 id="JOIN查询"><a href="#JOIN查询" class="headerlink" title="JOIN查询"></a>JOIN查询</h5><p>JOIN查询需要先确定主表，然后把另一个表的数据“附加”到结果集上；<br>INNER JOIN是最常用的一种JOIN查询，它的语法是SELECT … FROM &lt;表1&gt; INNER JOIN &lt;表2&gt; ON &lt;条件…&gt;；<br>JOIN查询仍然可以使用WHERE条件和ORDER BY排序。</p>
 <h5 id="条件表达式"><a href="#条件表达式" class="headerlink" title="条件表达式"></a>条件表达式</h5><table>
 <thead>
@@ -495,29 +495,29 @@ print(cur.fetchall())</code></pre>
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/coffee/2019/04/01/%E8%8D%89%E7%A8%BF/Python-pymongo/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  Python-pymongo
-              </a>
-            
+                <a href="/coffee/2019/04/01/%E8%8D%89%E7%A8%BF/Python-pymongo/">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    Python-pymongo
+                </a>
+                
         </div>
         <div class="item right">
             
-              <a href="/coffee/2019/02/21/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B02/">
-                Docker笔记2
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
+                <a href="/coffee/2019/02/21/%E8%8D%89%E7%A8%BF/Docker%E7%AC%94%E8%AE%B02/">
+                    Docker笔记2
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                
         </div>
     </div>
+    
 
+        
 
-
-
-<script>
-	
-	
-</script>
+                <script>
+                    
+                    
+                </script>
 	</div>
 	<div id="footer">
 	<p>
