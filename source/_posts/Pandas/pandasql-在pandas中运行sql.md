@@ -2,7 +2,7 @@
 title: 'pandasql:在pandas中运行sql'
 date: 2020-06-15 10:15:42
 tags:
-categories:
+categories: pandas 
 ---
 
 ## 介绍
@@ -92,4 +92,15 @@ def pysqldf(q):
 
 # 定义匿名函数
 pysqldf = lambda q: sqldf(q, globals())
+```
+
+## 在函数内使用sql
+```python
+# 需要定义全局变量
+def fun1(df1):
+    global g_df1
+    g_df1 = df1
+    sql = '...'
+    df2 = pysqldf(sql)
+    return df2
 ```
