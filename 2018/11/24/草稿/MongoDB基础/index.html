@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		pandasql:在pandas中运行sql | 
+		DB MOngo MongoDB基础 | 
 	 
 	coffee
 	</title>
@@ -107,7 +107,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/coffee/2020/06/15/Pandas/pandasql-%E5%9C%A8pandas%E4%B8%AD%E8%BF%90%E8%A1%8Csql/">
 										pandasql-在pandas中运行sql
 									</a>
@@ -147,7 +147,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/coffee/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/">
 										MongoDB基础
 									</a>
@@ -167,103 +167,111 @@
 	<div id="content">
 		<h1 id="article-title">
     
-        pandasql-在pandas中运行sql
+        MongoDB基础
 </h1>
 <div class="article-meta">
     
         <span>
-			阅读量:<span id="/coffee/2020/06/15/Pandas/pandasql-%E5%9C%A8pandas%E4%B8%AD%E8%BF%90%E8%A1%8Csql/" class="leancloud_visitors" data-flag-title="pandasql:在pandas中运行sql"></span>
+			阅读量:<span id="/coffee/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/" class="leancloud_visitors" data-flag-title="DB MOngo MongoDB基础"></span>
         </span>
         
             <span>Likang</span>
-            <span>2020-06-15 10:15:42</span>
+            <span>2018-11-24 00:00:00</span>
             
                 <div id="article-categories">
                     
-                        
-                            <span>
-                        <i class="fa fa-folder" aria-hidden="true"></i>
-                        <a href="/coffee/categories/pandas/">pandas</a>
-						
-                    </span>
-                            
-                                
                 </div>
                 
 </div>
 
 <div id="article-content">
-    <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>pandasql是一个模拟 R 包 sqldf 的Python 库。<br>这是一个小而强大的库，只有358行代码。<br>pandasql 的想法是让 Python 运行 SQL。</p>
-<h2 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h2><p>1.安装pandasql包</p>
-<pre><code class="shell">pip install pandasql</code></pre>
-<p>2.基本用法</p>
-<pre><code class="python">from pandasql import sqldf
-import pandas as pd
+    <h2 id="MongoDB-是一个基于分布式文件存储的数据库。由-C-语言编写。旨在为-WEB-应用提供可扩展的高性能数据存储解决方案。"><a href="#MongoDB-是一个基于分布式文件存储的数据库。由-C-语言编写。旨在为-WEB-应用提供可扩展的高性能数据存储解决方案。" class="headerlink" title="MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。"></a>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</h2><p>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p>
+<a id="more"></a>
+<p><img src="/coffee/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/mongodb.png" alt="MongoDB"></p>
+<h1 id="0-数据库启动-关闭-🍕"><a href="#0-数据库启动-关闭-🍕" class="headerlink" title="0.数据库启动/关闭 🍕"></a>0.数据库启动/关闭 🍕</h1><p>启动mongonDB:<br>C:\mongo\mongodb\bin &gt;&gt;</p>
+<pre><code class="shell">mongod --dbpath C:\mongo\mongodb\data\db
+mongod --dbpath C:\mongo\mongodb\data\db --repair # 异常关闭时重启</code></pre>
+<p>关闭mongodb:<br>mongo_shell &gt;&gt;</p>
+<pre><code>use admin
+db.shutdownServer()</code></pre><hr>
+<h1 id="1-数据库的导入和导出-🍔"><a href="#1-数据库的导入和导出-🍔" class="headerlink" title="1.数据库的导入和导出 🍔"></a>1.数据库的导入和导出 🍔</h1><pre><code class="shell">本地:127.0.0.1:27017
+线上:xxx.xxx.xx.xxx:xxxxx-u xxxx -p xxxxxxxx
 
-def pysqldf(q):
-    return sqldf(q, globals())
+**BSON**
+bson格式导出
+mongodump -h 127.0.0.1:27017 -d xxxx -c xxxx -o ./
+mongodump -h xxx.xxx.xx.xxx:xxxx -d xxxx -c xxxx -u xxxx -p xxxxxxxx -o ./
+bson格式导入
+mongorestore -h xxx.xxx.xx.xxx:xxxx -d xxxx --dir F:\xxxx -u xxxx -p xxxxxxxx
+mongorestore -h 127.0.0.1:27017 -d xxxx--dir F:\xxxx\xxxx
 
-# 使用匿名函数也可
-# pysqldf = lambda q: sqldf(q, globals())
+**JSON**
+json格式导出
+mongoexport -h xxx.xxx.xx.xxx:xxxx -d xxxx-c xxxx -u xxxx -p xxxxxxxx --out name.json
+json格式导入
+mongoimport -h xxx.xxx.xx.xxx:xxxx -d xxxx -c xxxx --file name.json -u xxxx -p xxxxxxxx
+mongoimport -h xxx.xxx.xx.xxx:xxxx -d xxxx -c xxxx (--drop) --file name.json -u xxxx -p xxxxxxxx</code></pre>
+<hr>
+<h1 id="2-更新和删除-字段-🍟"><a href="#2-更新和删除-字段-🍟" class="headerlink" title="2.更新和删除 字段 🍟"></a>2.更新和删除 字段 🍟</h1><p><strong>修改</strong> 字段名</p>
+<pre><code class="js">db.getCollection(&#39;pydb&#39;).update({}, {$rename : {&quot;pop&quot; : &quot;abc&quot;}}, false, true)
+db.getCollection(&#39;SS_UniversityInfo&#39;).update({}, {$rename : {&quot;XuanKaoScrope&quot; : &quot;SubjectScope&quot;}}, false, true)</code></pre>
+<p>参数说明：<br>db.collection.update(criteria,objNew,upsert,multi)<br><strong>criteria</strong> ：查询条件<br><strong>objNew</strong> ：update对象和一些更新操作符<br><strong>upsert</strong> ：如果不存在update的记录，是否插入objNew这个新的文档，true为插入，默认为false，不插入。<br><strong>multi</strong> ：默认是false，只更新找到的第一条记录。如果为true，把按条件查询出来的记录全部更新</p>
+<p><strong>更新</strong> 字段</p>
+<pre><code class="js">db.table.update({}, {$set: {content:&quot;xxx&quot;}}, false,true)</code></pre>
+<p><strong>删除</strong> 字段</p>
+<pre><code class="js">db.table.update({},{$unset:{content:&quot;&quot;}},false, true)</code></pre>
+<hr>
+<h2 id="练习-🍤"><a href="#练习-🍤" class="headerlink" title="练习 🍤"></a>练习 🍤</h2><ul>
+<li>修改列表里的字典里的字段名</li>
+</ul>
+<pre><code class="js">// 把XuanKaoSubjectScrope 字段改成 Scrope
+[
+    {
+        &quot;SubjectScope&quot;:[
+            {&quot;XuanKaoSubjectScrope&quot;:&quot;x1&quot;},
+            {&quot;XuanKaoSubjectScrope&quot;:&quot;x2&quot;},
+            {&quot;XuanKaoSubjectScrope&quot;:&quot;x3&quot;},
+        ]
+    },
+    {},
+    {}...
+]</code></pre>
+<pre><code class="js">// [未完美解决] 当时采用的方法是导出json再替换文本😂
+db.getCollection(&#39;SS_UniversityInfo&#39;).update(
+    {&quot;SubjectScope&quot;:{
+        &quot;$elemMatch&quot;:{
+            &quot;XuanKaoSubjectScrope&quot;:{
+                &quot;$exists&quot;:true}}}},
+    {&quot;$rename&quot;:{
+        &quot;$SubjectScope.$.XuanKaoSubjectScrope&quot;:&quot;SubjectScope.$.Scrope&quot;}
+        },
+    false,
+    true)</code></pre>
+<pre><code class="js">// 现在发现可以写python或js脚本解决</code></pre>
+<hr>
+<ul>
+<li>正则寻找不以cn/com/org/net/hk/edu结尾的字段</li>
+</ul>
+<pre><code class="js">db.getCollection(&#39;SS_UniversityInfo&#39;).find({&quot;WebSite&quot;:{&quot;$not&quot;:/cn$|com$|org$|net$|hk$|edu$/}})
 
-# 获取待处理的DataFrame
-# df_test = xxx
-
-q = &#39;select * from df_test&#39;
-
-df1 = pysqldf(q)
-print(df1)</code></pre>
-<h2 id="自带数据集"><a href="#自带数据集" class="headerlink" title="自带数据集"></a>自带数据集</h2><p>pandasql内置了两个数据集，方便测试使用。<br>meat：数据集来自美国农业部，包含有关牲畜，乳制品和家禽前景和生产的指标<br>births：数据集来自联合国统计司，包含按月计算的活产婴儿人口统计</p>
-<pre><code class="python">import pandas as pd 
-import matplotlib.pyplot as plt 
-from pandasql import sqldf
-from pandasql import load_meat, load_births
-
-
-meat = load_meat()
-births = load_births()
-
-pysqldf = lambda q: sqldf(q, globals())
-q = &#39;&#39;&#39;
-select 
-m.date,
-m.beef,
-b.births 
-from meat m 
-left join births b 
-on m.date = b.date  
-where m.date &gt; &#39;1974-12-32&#39;
-&#39;&#39;&#39;
-
-df = pysqldf(q)
-print(df)
-
-df.births = df.births.fillna(method=&#39;backfill&#39;)
-
-fig = plt.figure()
-ax1 = fig.add_subplot(111)
-ax1.plot(df[&#39;beef&#39;].rolling(12).mean(), color=&#39;b&#39;)
-
-ax2 = ax1.twinx()
-ax2.plot(df[&#39;births&#39;].rolling(12).mean(), color=&#39;r&#39;)
-ax2.set_ylabel(&#39;babies born&#39;, color=&#39;r&#39;)
-plt.title(&#39;Beef Consumption and the Birth Rate&#39;)
-plt.show()</code></pre>
-<p><img src="/coffee/2020/06/15/Pandas/pandasql-%E5%9C%A8pandas%E4%B8%AD%E8%BF%90%E8%A1%8Csql/plt1.jpg" alt></p>
-<h2 id="locals-与-globals"><a href="#locals-与-globals" class="headerlink" title="locals() 与 globals()"></a>locals() 与 globals()</h2><p>pandasql 需要在会话/环境中访问其他变量。<br>虽然当执行 SQL 语句时，可以传递 locals() 给 pandasql，但是如果你运行了大量可能麻烦的查询。<br>为了避免一直传递给 locals，你可以将这个帮助函数添加到脚本中，来其设置 globals() 如下：</p>
-<pre><code class="python"># 定义函数
-def pysqldf(q):
-    return sqldf(q, globals())
-
-# 定义匿名函数
-pysqldf = lambda q: sqldf(q, globals())</code></pre>
-<h2 id="在函数内使用sql"><a href="#在函数内使用sql" class="headerlink" title="在函数内使用sql"></a>在函数内使用sql</h2><pre><code class="python"># 需要定义全局变量
-def fun1(df1):
-    global g_df1
-    g_df1 = df1
-    sql = &#39;...&#39;
-    df2 = pysqldf(sql)
-    return df2</code></pre>
+db.getCollection(&#39;SS_UniversityInfo&#39;).find({&quot;WebSite&quot;:{&quot;$regex&quot;:&quot;net$|com$&quot;}})</code></pre>
+<ul>
+<li><a href="https://blog.csdn.net/yaomingyang/article/details/75103480" target="_blank" rel="noopener">MongoDB逻辑操作符$or, $and,$not,$nor</a></li>
+</ul>
+<hr>
+<h1 id="3-MogoDB-聚合-🍳"><a href="#3-MogoDB-聚合-🍳" class="headerlink" title="3.MogoDB 聚合 🍳"></a>3.MogoDB 聚合 🍳</h1><ul>
+<li><a href="http://www.runoob.com/mongodb/mongodb-aggregate.html" target="_blank" rel="noopener">菜鸟教程 MongoDB 聚合</a></li>
+</ul>
+<p>管道在Unix和Linux中一般用于将当前命令的 <strong>输出结果</strong> 作为下一个命令的 <strong>参数</strong> 。<br>MongoDB的聚合管道将MongoDB文档在一个管道处理完毕后将结果<strong>传递</strong>给下一个管道处理。<br>管道操作是可以<strong>重复</strong>的。</p>
+<p>简单介绍一下聚合中常用的几个参数：</p>
+<pre><code class="py">$project：修改输入文档的结构。可以用来重命名、增加或删除域，也可以用于创建计算结果以及嵌套文档。
+$match：用于过滤数据，只输出符合条件的文档。$match使用MongoDB的标准查询操作。
+$limit：用来限制MongoDB聚合管道返回的文档数。
+$skip：在聚合管道中跳过指定数量的文档，并返回余下的文档。
+$unwind：将文档中的某一个数组类型字段拆分成多条，每条包含数组中的一个值。
+$group：将集合中的文档分组，可用于统计结果。
+$sort：将输入文档排序后输出。
+$geoNear：输出接近某一地理位置的有序文档</code></pre>
 
 </div>
 
@@ -271,19 +279,14 @@ def fun1(df1):
     <div class="post-guide">
         <div class="item left">
             
-                <a href="/coffee/2020/06/30/SICP/SICP-01-%E6%9E%84%E9%80%A0%E8%BF%87%E7%A8%8B%E6%8A%BD%E8%B1%A1/">
+                <a href="/coffee/2020/06/15/Pandas/pandasql-%E5%9C%A8pandas%E4%B8%AD%E8%BF%90%E8%A1%8Csql/">
                     <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    SICP-01-构造过程抽象
+                    pandasql-在pandas中运行sql
                 </a>
                 
         </div>
         <div class="item right">
             
-                <a href="/coffee/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/">
-                    MongoDB基础
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </a>
-                
         </div>
     </div>
     

@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		pandasql:在pandas中运行sql | 
+		pandas-读写mysql | 
 	 
 	coffee
 	</title>
@@ -98,7 +98,7 @@
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/coffee/2020/07/03/Pandas/pandas-%E8%AF%BB%E5%86%99mysql/">
 										pandas-读写mysql
 									</a>
@@ -107,7 +107,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/coffee/2020/06/15/Pandas/pandasql-%E5%9C%A8pandas%E4%B8%AD%E8%BF%90%E8%A1%8Csql/">
 										pandasql-在pandas中运行sql
 									</a>
@@ -167,16 +167,16 @@
 	<div id="content">
 		<h1 id="article-title">
     
-        pandasql-在pandas中运行sql
+        pandas-读写mysql
 </h1>
 <div class="article-meta">
     
         <span>
-			阅读量:<span id="/coffee/2020/06/15/Pandas/pandasql-%E5%9C%A8pandas%E4%B8%AD%E8%BF%90%E8%A1%8Csql/" class="leancloud_visitors" data-flag-title="pandasql:在pandas中运行sql"></span>
+			阅读量:<span id="/coffee/2020/07/03/Pandas/pandas-%E8%AF%BB%E5%86%99mysql/" class="leancloud_visitors" data-flag-title="pandas-读写mysql"></span>
         </span>
         
             <span>Likang</span>
-            <span>2020-06-15 10:15:42</span>
+            <span>2020-07-03 15:38:28</span>
             
                 <div id="article-categories">
                     
@@ -193,77 +193,68 @@
 </div>
 
 <div id="article-content">
-    <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>pandasql是一个模拟 R 包 sqldf 的Python 库。<br>这是一个小而强大的库，只有358行代码。<br>pandasql 的想法是让 Python 运行 SQL。</p>
-<h2 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h2><p>1.安装pandasql包</p>
-<pre><code class="shell">pip install pandasql</code></pre>
-<p>2.基本用法</p>
-<pre><code class="python">from pandasql import sqldf
-import pandas as pd
-
-def pysqldf(q):
-    return sqldf(q, globals())
-
-# 使用匿名函数也可
-# pysqldf = lambda q: sqldf(q, globals())
-
-# 获取待处理的DataFrame
-# df_test = xxx
-
-q = &#39;select * from df_test&#39;
-
-df1 = pysqldf(q)
-print(df1)</code></pre>
-<h2 id="自带数据集"><a href="#自带数据集" class="headerlink" title="自带数据集"></a>自带数据集</h2><p>pandasql内置了两个数据集，方便测试使用。<br>meat：数据集来自美国农业部，包含有关牲畜，乳制品和家禽前景和生产的指标<br>births：数据集来自联合国统计司，包含按月计算的活产婴儿人口统计</p>
-<pre><code class="python">import pandas as pd 
-import matplotlib.pyplot as plt 
-from pandasql import sqldf
-from pandasql import load_meat, load_births
-
-
-meat = load_meat()
-births = load_births()
-
-pysqldf = lambda q: sqldf(q, globals())
-q = &#39;&#39;&#39;
-select 
-m.date,
-m.beef,
-b.births 
-from meat m 
-left join births b 
-on m.date = b.date  
-where m.date &gt; &#39;1974-12-32&#39;
-&#39;&#39;&#39;
-
-df = pysqldf(q)
-print(df)
-
-df.births = df.births.fillna(method=&#39;backfill&#39;)
-
-fig = plt.figure()
-ax1 = fig.add_subplot(111)
-ax1.plot(df[&#39;beef&#39;].rolling(12).mean(), color=&#39;b&#39;)
-
-ax2 = ax1.twinx()
-ax2.plot(df[&#39;births&#39;].rolling(12).mean(), color=&#39;r&#39;)
-ax2.set_ylabel(&#39;babies born&#39;, color=&#39;r&#39;)
-plt.title(&#39;Beef Consumption and the Birth Rate&#39;)
-plt.show()</code></pre>
-<p><img src="/coffee/2020/06/15/Pandas/pandasql-%E5%9C%A8pandas%E4%B8%AD%E8%BF%90%E8%A1%8Csql/plt1.jpg" alt></p>
-<h2 id="locals-与-globals"><a href="#locals-与-globals" class="headerlink" title="locals() 与 globals()"></a>locals() 与 globals()</h2><p>pandasql 需要在会话/环境中访问其他变量。<br>虽然当执行 SQL 语句时，可以传递 locals() 给 pandasql，但是如果你运行了大量可能麻烦的查询。<br>为了避免一直传递给 locals，你可以将这个帮助函数添加到脚本中，来其设置 globals() 如下：</p>
-<pre><code class="python"># 定义函数
-def pysqldf(q):
-    return sqldf(q, globals())
-
-# 定义匿名函数
-pysqldf = lambda q: sqldf(q, globals())</code></pre>
-<h2 id="在函数内使用sql"><a href="#在函数内使用sql" class="headerlink" title="在函数内使用sql"></a>在函数内使用sql</h2><pre><code class="python"># 需要定义全局变量
-def fun1(df1):
-    global g_df1
-    g_df1 = df1
-    sql = &#39;...&#39;
-    df2 = pysqldf(sql)
-    return df2</code></pre>
+    <h2 id="pandas-mysql"><a href="#pandas-mysql" class="headerlink" title="pandas-mysql"></a>pandas-mysql</h2><p>使用pandas可以方便快捷地读写mysql，使用sql语句直接查询，DataFrame直接存入数据库甚至不用建表结构。</p>
+<h2 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h2><h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><pre><code class="python">import pandas as pd
+from sqlalchemy import create_engine
+engine = create_engine(&#39;mysql+pymysql://root:admin@localhost:3306/test&#39;)</code></pre>
+<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<li>engine = create_engine(‘dialect+driver://username:password@host:port/database’)</li>
+<li><ul>
+<li>dialect – 数据库类型</li>
+</ul>
+</li>
+<li><ul>
+<li>driver – 数据库驱动选择</li>
+</ul>
+</li>
+<li><ul>
+<li>username – 数据库用户名</li>
+</ul>
+</li>
+<li><ul>
+<li>password – 用户密码</li>
+</ul>
+</li>
+<li><ul>
+<li>host 服务器地址</li>
+</ul>
+</li>
+<li><ul>
+<li>port 端口</li>
+</ul>
+</li>
+<li><ul>
+<li>database 数据库</li>
+</ul>
+</li>
+</ul>
+<h2 id="读数据-pd-read-sql"><a href="#读数据-pd-read-sql" class="headerlink" title="读数据 pd.read_sql"></a>读数据 pd.read_sql</h2><pre><code class="python">sql = &#39;select * from table limit 1&#39;
+df = pd.read_sql(sql, engine)</code></pre>
+<h2 id="写数据-df-to-sql"><a href="#写数据-df-to-sql" class="headerlink" title="写数据 df.to_sql"></a>写数据 df.to_sql</h2><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><pre><code>data = {&#39;state&#39;: [&#39;Ohio&#39;, &#39;Ohio&#39;, &#39;Ohio&#39;, &#39;Nevada&#39;, &#39;Nevada&#39;, &#39;Nevada&#39;],
+        &#39;year&#39;: [2000, 2001, 2002, 2001, 2002, 2003],
+        &#39;pop&#39;: [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]}
+df = pd.DataFrame(data)
+df.to_sql(name=&#39;df1&#39;, con=engin, index=None, if_exisis=&#39;replace&#39;)</code></pre><h4 id="参数说明-1"><a href="#参数说明-1" class="headerlink" title="参数说明"></a>参数说明</h4><ul>
+<li>chunksize可以设置一次入库的大小</li>
+<li>if_exists设置如果数据库中表名存在时的操作</li>
+<li><ul>
+<li>replace表示将表原来数据删除放入当前数据</li>
+</ul>
+</li>
+<li><ul>
+<li>append表示追加</li>
+</ul>
+</li>
+<li><ul>
+<li>fail则表示将抛出异常，结束操作</li>
+</ul>
+</li>
+<li><ul>
+<li>默认是fail</li>
+</ul>
+</li>
+<li>index=接受boolean值，表示是否将DataFrame的index也作为表的列存储。</li>
+</ul>
 
 </div>
 
@@ -271,16 +262,11 @@ def fun1(df1):
     <div class="post-guide">
         <div class="item left">
             
-                <a href="/coffee/2020/06/30/SICP/SICP-01-%E6%9E%84%E9%80%A0%E8%BF%87%E7%A8%8B%E6%8A%BD%E8%B1%A1/">
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    SICP-01-构造过程抽象
-                </a>
-                
         </div>
         <div class="item right">
             
-                <a href="/coffee/2018/11/24/%E8%8D%89%E7%A8%BF/MongoDB%E5%9F%BA%E7%A1%80/">
-                    MongoDB基础
+                <a href="/coffee/2020/06/30/SICP/SICP-01-%E6%9E%84%E9%80%A0%E8%BF%87%E7%A8%8B%E6%8A%BD%E8%B1%A1/">
+                    SICP-01-构造过程抽象
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </a>
                 
